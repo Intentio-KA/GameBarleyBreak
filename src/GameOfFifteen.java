@@ -56,7 +56,7 @@ public class GameOfFifteen extends JPanel{
                     }
 
                     int c1 = ex / tileSize;
-                    int r1 = ex / tileSize;
+                    int r1 = ey / tileSize;
 
                     int c2 = blankPos % size;
                     int r2 = blankPos / size;
@@ -149,8 +149,8 @@ public class GameOfFifteen extends JPanel{
             int r = i / size;
             int c = i % size;
 
-            int x = margin + c + tileSize;
-            int y = margin + r + tileSize;
+            int x = margin + c * tileSize;
+            int y = margin + r * tileSize;
 
             if(tiles[i] == 0){
                 if(gameOver){
